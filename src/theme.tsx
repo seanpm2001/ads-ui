@@ -1,16 +1,7 @@
-import {
-  createTheme,
-  experimental_extendTheme as extendTheme,
-} from "@mui/material";
-import {
-  color,
-  font,
-  spacing,
-  gradient,
-  typography,
-} from "@brave/leo/tokens/css";
+import {createTheme} from "@mui/material";
+import {styles} from "style/styles";
 
-export const theme = extendTheme({
+export const theme = createTheme({
   typography: {
     fontFamily: "Poppins",
     h1: {
@@ -22,43 +13,22 @@ export const theme = extendTheme({
       fontWeight: 600,
     },
   },
-  // palette: {
-  //   primary: {
-  //     main: color.light.primary["50"],
-  //   },
-  //   secondary: {
-  //     main: "#4C54D2",
-  //   },
-  //   background: {
-  //     default: "#F1F3F5",
-  //     paper: "white",
-  //   },
-  //   text: {
-  //     primary: "#343546",
-  //     secondary: "#A0A1B2",
-  //   },
-  // },
-  colorSchemes: {
-    light: {
-      palette: {
-        primary: {
-          main: color.light.primary["50"],
-        },
-        // secondary: {
-        //   main: 'rgb(252, 147, 120)',
-        // },
-        // background: {
-        //   default: "#F1F3F5",
-        //   paper: "white",
-        // },
-        // text: {
-        //   primary: color.text.primary,
-        //   secondary: color.text.secondary,
-        // },
-      },
+  palette: {
+    primary: {
+      main: styles.ColorLightPrimary50,
+    },
+    secondary: {
+      main: styles.ColorLightSecondary50
+    },
+    background: {
+      default: "#F1F3F5",
+      paper: "white",
+    },
+    text: {
+      primary: "#343546",
+      secondary: "#A0A1B2",
     },
   },
-  // },
   components: {
     MuiButton: {
       styleOverrides: {

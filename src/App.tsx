@@ -6,7 +6,6 @@ import { DraftContext, getAllDrafts } from "state/context";
 import { User } from "user/User";
 import {
   CssBaseline,
-  Experimental_CssVarsProvider as CssVarsProvider,
   StyledEngineProvider,
   ThemeProvider,
 } from "@mui/material";
@@ -32,7 +31,7 @@ export function App() {
 
   return (
     <StyledEngineProvider injectFirst>
-      <CssVarsProvider theme={theme}>
+      <ThemeProvider theme={theme}>
         <CssBaseline />
         <DraftContext.Provider
           value={{
@@ -51,7 +50,7 @@ export function App() {
             <Redirect to="/user/main" />
           </Switch>
         </DraftContext.Provider>
-      </CssVarsProvider>
+      </ThemeProvider>
     </StyledEngineProvider>
   );
 }
