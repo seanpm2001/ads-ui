@@ -4,12 +4,8 @@ import { Redirect, Route, Switch } from "react-router-dom";
 
 import { DraftContext, getAllDrafts } from "state/context";
 import { User } from "user/User";
-import {
-  CssBaseline,
-  Experimental_CssVarsProvider as CssVarsProvider,
-  StyledEngineProvider,
-  ThemeProvider,
-} from "@mui/material";
+import { CssBaseline, StyledEngineProvider } from "@mui/material";
+import { Experimental_CssVarsProvider as CssVarsProvider } from "@mui/material/styles";
 import { theme } from "theme";
 import { CampaignForm } from "user/views/adsManager/types";
 import { useIsAuthenticated } from "auth/hooks/queries/useIsAuthenticated";

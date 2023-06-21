@@ -1,6 +1,7 @@
 import { Box, Card, CardContent, Container } from "@mui/material";
 import React from "react";
-import BraveLogo from "../../../../brave-logotype-full-color.png";
+import BraveLogo from "../../../../brave-ads-black.svg";
+import gradient from "../../../../gradient.svg";
 
 interface Props {
   children?: React.ReactNode;
@@ -11,12 +12,15 @@ export function AuthContainer({ children }: Props) {
     <Container
       maxWidth={false}
       sx={{
-        display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        background:
-          "radial-gradient(ellipse 100% 100% at 0% 0%,rgb(57, 45, 209, 0.8) 0%,rgb(255, 67, 67, 0.8) 100%)",
-        height: "100%",
+        backgroundImage: `url(${gradient})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundAttachment: "fixed",
+        display: "flex",
+        flexDirection: "column",
+        minHeight: "100%",
       }}
     >
       <Box display="flex" width="725px">
@@ -38,7 +42,7 @@ export function AuthContainer({ children }: Props) {
           >
             <Box
               component="div"
-              width="150px"
+              width="180px"
               height="60px"
               mb={3}
               sx={{

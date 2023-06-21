@@ -2,13 +2,6 @@ import {
   createTheme,
   experimental_extendTheme as extendTheme,
 } from "@mui/material";
-import {
-  color,
-  font,
-  spacing,
-  gradient,
-  typography,
-} from "@brave/leo/tokens/css";
 
 export const theme = extendTheme({
   typography: {
@@ -42,7 +35,8 @@ export const theme = extendTheme({
     light: {
       palette: {
         primary: {
-          main: color.light.primary["50"],
+          // --leo-color-light-primary-50: rgb(66, 62, 238)
+          main: "rgb(66, 62, 238)",
         },
         // secondary: {
         //   main: 'rgb(252, 147, 120)',
@@ -64,10 +58,18 @@ export const theme = extendTheme({
       styleOverrides: {
         root: ({ ownerState }) => ({
           ...ownerState,
-          borderRadius: "30px",
+          borderRadius: "1000px",
         }),
       },
     },
+    // MuiPaper: {
+    //   styleOverrides: {
+    //     root: ({ ownerState }) => ({
+    //       ...ownerState,
+    //       borderRadius: "12px",
+    //     }),
+    //   },
+    // },
     MuiCard: {
       defaultProps: {
         sx: {
