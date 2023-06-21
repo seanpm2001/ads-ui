@@ -7,6 +7,7 @@ import { App } from "App";
 import "./index.css";
 import "@fontsource/poppins/latin.css";
 import "@fontsource/mulish/latin.css";
+// import "@brave/leo/tokens/css/variables.css";
 import { IAuthProvider } from "auth";
 
 const container = document.getElementById("root");
