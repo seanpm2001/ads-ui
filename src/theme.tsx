@@ -1,6 +1,16 @@
-import { createTheme } from "@mui/material";
+import {
+  createTheme,
+  experimental_extendTheme as extendTheme,
+} from "@mui/material";
+import {
+  color,
+  font,
+  spacing,
+  gradient,
+  typography,
+} from "@brave/leo/tokens/css";
 
-export const theme = createTheme({
+export const theme = extendTheme({
   typography: {
     fontFamily: "Poppins",
     h1: {
@@ -12,20 +22,58 @@ export const theme = createTheme({
       fontWeight: 600,
     },
   },
-  palette: {
-    primary: {
-      main: "#F8532BCC",
+  // palette: {
+  //   primary: {
+  //     main: color.light.primary["50"],
+  //   },
+  //   secondary: {
+  //     main: "#4C54D2",
+  //   },
+  //   background: {
+  //     default: "#F1F3F5",
+  //     paper: "white",
+  //   },
+  //   text: {
+  //     primary: "#343546",
+  //     secondary: "#A0A1B2",
+  //   },
+  // },
+  colorSchemes: {
+    light: {
+      palette: {
+        primary: {
+          main: color.light.primary["50"],
+        },
+        // secondary: {
+        //   main: 'rgb(252, 147, 120)',
+        // },
+        // background: {
+        //   default: "#F1F3F5",
+        //   paper: "white",
+        // },
+        // text: {
+        //   primary: color.text.primary,
+        //   secondary: color.text.secondary,
+        // },
+      },
     },
-    secondary: {
-      main: "#4C54D2",
+  },
+  // },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: ({ ownerState }) => ({
+          ...ownerState,
+          borderRadius: "30px",
+        }),
+      },
     },
-    background: {
-      default: "#F1F3F5",
-      paper: "white",
-    },
-    text: {
-      primary: "#343546",
-      secondary: "#A0A1B2",
+    MuiCard: {
+      defaultProps: {
+        sx: {
+          p: 3,
+        },
+      },
     },
   },
 });
