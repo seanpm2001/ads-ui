@@ -34,10 +34,18 @@ export const theme = createTheme({
       styleOverrides: {
         root: ({ ownerState }) => ({
           ...ownerState,
-          borderRadius: "30px",
+          borderRadius: "1000px",
         }),
       },
     },
+    // MuiPaper: {
+    //   styleOverrides: {
+    //     root: ({ ownerState }) => ({
+    //       ...ownerState,
+    //       borderRadius: "12px",
+    //     }),
+    //   },
+    // },
     MuiCard: {
       defaultProps: {
         sx: {
