@@ -1,16 +1,36 @@
-import {createTheme} from "@mui/material";
-import {styles} from "style/styles";
+import { createTheme } from "@mui/material";
+import { styles } from "style/styles";
 
 export const theme = createTheme({
   typography: {
     fontFamily: "Poppins",
     h1: {
-      fontSize: "18px",
-      fontWeight: 400,
+      ...styles.FontDesktopHeadingH1,
+      lineHeight: "unset",
     },
     h2: {
-      fontSize: "14px",
-      fontWeight: 600,
+      ...styles.FontDesktopHeadingH2,
+      lineHeight: "unset",
+    },
+    h3: {
+      ...styles.FontDesktopHeadingH3,
+      lineHeight: "unset",
+    },
+    h4: {
+      ...styles.FontDesktopHeadingH4,
+      lineHeight: "unset",
+    },
+    subtitle1: {
+      fontFamily: "Poppins",
+    },
+    subtitle2: {
+      fontFamily: "Poppins",
+    },
+    body1: {
+      fontFamily: "Poppins",
+    },
+    body2: {
+      fontFamily: "Poppins",
     },
   },
   palette: {
@@ -18,15 +38,15 @@ export const theme = createTheme({
       main: styles.ColorLightPrimary50,
     },
     secondary: {
-      main: styles.ColorLightSecondary50
+      main: styles.ColorLightSecondary50,
     },
     background: {
       default: "#F1F3F5",
       paper: "white",
     },
     text: {
-      primary: "#343546",
-      secondary: "#A0A1B2",
+      primary: styles.ColorLightTextPrimary,
+      secondary: styles.ColorLightTextSecondary,
     },
   },
   components: {
@@ -42,7 +62,6 @@ export const theme = createTheme({
     //   styleOverrides: {
     //     root: ({ ownerState }) => ({
     //       ...ownerState,
-    //       borderRadius: "12px",
     //     }),
     //   },
     // },

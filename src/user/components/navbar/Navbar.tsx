@@ -16,7 +16,7 @@ import {
 import { UserMenu } from "user/components/navbar/components/UserMenu";
 import { DraftMenu } from "user/components/navbar/components/DraftMenu";
 import moment from "moment";
-import ads from "../../../../brave-ads-black.svg";
+import ads from "../../../../brave-logo-orange.svg";
 import { useAdvertiser } from "auth/hooks/queries/useAdvertiser";
 
 TopBarProgress.config({
