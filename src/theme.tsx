@@ -58,13 +58,6 @@ export const theme = createTheme({
         }),
       },
     },
-    // MuiPaper: {
-    //   styleOverrides: {
-    //     root: ({ ownerState }) => ({
-    //       ...ownerState,
-    //     }),
-    //   },
-    // },
     MuiCard: {
       defaultProps: {
         sx: {

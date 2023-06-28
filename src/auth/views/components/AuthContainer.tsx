@@ -2,7 +2,6 @@ import { Box, Card, CardContent, Container } from "@mui/material";
 import React from "react";
 import BraveLogo from "../../../../brave-logo-orange.svg";
 import { Background } from "components/Background/Background";
-
 interface Props {
   children?: React.ReactNode;
 }
